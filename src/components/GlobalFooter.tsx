@@ -3,15 +3,27 @@ import Link from 'next/link'
 
 const GlobalFooter = () => {
   return (
-    <footer className='p-2 flex justify-between items-center h-[70px]'>
-      <Link href='/'>
-        <Home size={54} className='p-2' />
+    <footer className='flex max-h-[80px] items-center justify-between px-3 pb-3'>
+      <Link
+        href='/'
+        className='flex flex-col items-center justify-center font-medium hover:opacity-50'
+      >
+        <Home size={30} />
+        Home
       </Link>
-      <Link href='/history'>
-        <History size={54} className='p-2' />
+      <Link
+        href='/history'
+        className='flex flex-col items-center justify-center font-medium hover:opacity-50'
+      >
+        <History size={30} />
+        History
       </Link>
-      <Link href='/profile'>
-        <UserRound size={54} className='p-2' />
+      <Link
+        href='/profile'
+        className='flex flex-col items-center justify-center font-medium hover:opacity-50'
+      >
+        <UserRound size={30} />
+        Profile
       </Link>
     </footer>
   )

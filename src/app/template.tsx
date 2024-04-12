@@ -1,4 +1,5 @@
 'use client'
+
 import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
 
@@ -6,11 +7,11 @@ const variants = {
   hidden: { opacity: 0 },
   enter: { opacity: 1 },
   slideInFromLeft: {
-    x: '-50vw',
+    x: '-10vw',
     opacity: 0,
   },
   slideInFromRight: {
-    x: '50vw',
+    x: '10vw',
     opacity: 0,
   },
   center: {

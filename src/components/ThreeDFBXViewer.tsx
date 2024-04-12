@@ -9,12 +9,12 @@ interface ThreeDFBXViewerProps {
 
 const FBXModel = ({ file }: { file: string }) => {
   const fbx = useFBX(file)
-  return <primitive object={fbx} scale={0.05} />
+  return <primitive object={fbx} scale={0.02} />
 }
 
 const ThreeDFBXViewer: React.FC<ThreeDFBXViewerProps> = ({ fbxFile }) => {
   return (
-    <div className='w-full h-full bg-gray-300'>
+    <div className='w-full h-full'>
       <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
