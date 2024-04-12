@@ -1,0 +1,36 @@
+{
+  "name": "test-3d",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.105.3",
+    "@react-three/fiber": "^8.16.1",
+    "@serwist/next": "9.0.0-preview.21",
+    "@serwist/sw": "9.0.0-preview.21",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "eslint-config-prettier": "^9.1.0",
+    "framer-motion": "^11.0.28",
+    "lucide-react": "^0.367.0",
+    "next": "14.1.4",
+    "prettier": "^3.2.5",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18.2.75",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
