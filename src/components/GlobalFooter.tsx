@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const GlobalFooter = () => {
   return (
-    <footer className='flex max-h-[80px] items-center justify-between px-3 pb-3'>
+    <footer className='flex max-h-[80px] items-center justify-between px-4 pb-3'>
       <Link
         href='/'
         className='flex flex-col items-center justify-center font-medium hover:opacity-50'

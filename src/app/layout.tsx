@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.scss'
 import GlobalFooter from '@/components/GlobalFooter'
+import { cn } from '@/lib/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={cn(inter.className, 'max-w-md mx-auto')}>
         {children}
         <GlobalFooter />
       </body>

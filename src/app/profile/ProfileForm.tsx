@@ -35,11 +35,11 @@ export function ProfileForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '南場智子',
-      department: 'DeNA',
-      type: '役員',
-      employeeNumber: '10001001',
-      hireDate: new Date('1999-03-04'),
+      name: 'でらいと太郎',
+      department: 'ヒューマンリソース本部新入社員研修',
+      type: '正社員',
+      employeeNumber: '123456789',
+      hireDate: new Date('2024-04-01'),
     },
   })
 
