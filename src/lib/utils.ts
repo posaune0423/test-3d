@@ -24,10 +24,3 @@ export const detectAndroid = () => {
 export const detectMobile = () => {
   return detectiOS() || detectAndroid()
 }
-
-export const isPWA = () => {
-  if (!window) {
-    return false
-  }
-  return window.matchMedia('(display-mode: standalone)').matches
-}

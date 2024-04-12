@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { forwardRef, useCallback } from 'react'
 import { APP_DESCRIPTION, APP_NAME } from '@/constants'
 import { useA2HS } from '@/hooks/useA2HS'
-import { isPWA } from '@/lib/utils'
 
 type Props = {
   open: boolean
@@ -14,6 +13,9 @@ type Props = {
 const PWAInstallBanner = ({ open, height }: Props) => {
   const { promptEvent, promptToInstall } = useA2HS()
 
+  const isStandalone =
+    typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches
+
   const onInstallClick = useCallback(async () => {
     if (!promptEvent) {
       return
@@ -21,7 +23,7 @@ const PWAInstallBanner = ({ open, height }: Props) => {
     promptToInstall()
   }, [promptEvent, promptToInstall])
 
-  if (isPWA()) return
+  if (isStandalone) return
 
   return (
     <>

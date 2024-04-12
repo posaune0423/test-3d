@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.scss'
+import Providers from './Providers'
 import GlobalFooter from '@/components/GlobalFooter'
-import PWAInstallBanner from '@/components/PWAInstallBanner'
 import {
   APP_NAME,
   APP_DEFAULT_TITLE,
@@ -65,8 +65,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={cn(inter.className, 'min-h-screen')}>
-        <PWAInstallBanner open={true} />
-        {children}
+        <Providers>{children}</Providers>
         <GlobalFooter />
       </body>
     </html>
