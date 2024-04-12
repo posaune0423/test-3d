@@ -1,7 +1,7 @@
 'use client'
 
-import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useFBX } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 
 interface ThreeDFBXViewerProps {
   fbxFile: string
@@ -14,7 +14,7 @@ const FBXModel = ({ file }: { file: string }) => {
 
 const ThreeDFBXViewer: React.FC<ThreeDFBXViewerProps> = ({ fbxFile }) => {
   return (
-    <div className='w-full h-full'>
+    <div className='size-full'>
       <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
