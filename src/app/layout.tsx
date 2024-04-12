@@ -64,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cn(inter.className, 'min-h-screen')}>
+      <body className={cn(inter.className, 'min-h-screen max-w-md mx-auto')}>
         <Providers>{children}</Providers>
         <GlobalFooter />
       </body>
