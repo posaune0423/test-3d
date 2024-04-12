@@ -1,7 +1,7 @@
 // NOTE: written by @kodai3 in https://github.com/kodai3/react-use-a2hs/blob/main/src/useA2HS.ts
 import { useEffect, useState } from 'react'
 
-interface IBeforeInstallPromptEvent extends Event {
+export interface IBeforeInstallPromptEvent extends Event {
   readonly platforms: string[]
   readonly userChoice: Promise<{
     outcome: 'accepted' | 'dismissed'

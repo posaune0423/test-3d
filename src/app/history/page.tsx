@@ -1,6 +1,6 @@
 const History = () => {
   return (
-    <main className='min-h-[calc(100vh-80px)] w-full'>
+    <main className='mb-[80px] min-h-[calc(100vh-80px)] w-full'>
       <section className='p-4'>
         <h1 className='mb-4 text-3xl font-bold'>History</h1>
         <div className='rounded-lg bg-white p-4 shadow'>
