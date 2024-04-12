@@ -3,7 +3,7 @@ import MotionLink from './MotionLink'
 
 const GlobalFooter = () => {
   return (
-    <footer className='fixed bottom-0 max-h-[80px] w-full max-w-md bg-white px-4 pb-3'>
+    <footer className='fixed bottom-0 max-h-[80px] w-full max-w-md bg-white px-4 pb-5'>
       <div className='flex items-center justify-between'>
         <MotionLink
           href='/'
