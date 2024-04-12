@@ -28,7 +28,7 @@ const PWAInstallBanner = ({ open, height }: Props) => {
   return (
     <>
       <div
-        className={`bg-[#F2F2F2] px-2 py-3 ${open ? 'block' : 'hidden'} ${height && `h-[${height}px]`}`}
+        className={`mx-auto max-w-md bg-[#F2F2F2] px-2 py-3 ${open ? 'block' : 'hidden'} ${height && `h-[${height}px]`}`}
       >
         <div className='flex items-center gap-2'>
           <Image
