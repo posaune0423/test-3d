@@ -23,6 +23,9 @@ dependencies:
   '@serwist/next':
     specifier: 9.0.0-preview.21
     version: 9.0.0-preview.21(next@14.1.4)(typescript@5.4.5)
+  '@serwist/precaching':
+    specifier: 9.0.0-preview.21
+    version: 9.0.0-preview.21(typescript@5.4.5)
   '@serwist/sw':
     specifier: 9.0.0-preview.21
     version: 9.0.0-preview.21(typescript@5.4.5)
@@ -725,6 +728,18 @@ packages:
       zod: 3.22.4
     transitivePeerDependencies:
       - webpack
+    dev: false
+
+  /@serwist/precaching@9.0.0-preview.21(typescript@5.4.5):
+    resolution: {integrity: sha512-WhDySSSXS0lcE1tsL1Tvhs3W4B52wS3SHCVFF326ip4AvYrpvbPY+3NUT2g7c3Rg+KMPpo5pZzuDeV7qGXfiVw==}
+    peerDependencies:
+      typescript: '>=5.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@serwist/sw': 9.0.0-preview.21(typescript@5.4.5)
+      typescript: 5.4.5
     dev: false
 
   /@serwist/sw@9.0.0-preview.21(typescript@5.4.5):
