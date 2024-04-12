@@ -63,8 +63,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cn(inter.className, 'max-w-md mx-auto')}>
+      <body className={cn(inter.className, 'flex flex-col min-h-screen')}>
         {children}
+
         <GlobalFooter />
       </body>
     </html>
