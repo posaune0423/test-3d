@@ -22,11 +22,11 @@ const FAQ = [
 
 const FAQSection = () => {
   return (
-    <section className='w-full py-12'>
+    <section className='mx-auto max-w-4xl px-3 py-12'>
       <h2 className='mb-4 text-center text-4xl font-extrabold text-slate-900'>
         Frequently asked questions
       </h2>
-      <Accordion type='single' collapsible className='mx-auto w-full px-3 md:px-10'>
+      <Accordion type='single' collapsible className='mx-auto w-full'>
         {FAQ.map((faq, i) => (
           <AccordionItem value={`item-${i}`} key={i}>
             <AccordionTrigger>{faq.q}</AccordionTrigger>

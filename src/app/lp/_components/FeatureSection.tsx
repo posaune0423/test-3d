@@ -60,7 +60,7 @@ const FeaturePanel = ({ feature }: { feature: Feature }) => {
 
 const FeatureSection = () => {
   return (
-    <section className='mx-auto px-3 py-6 md:px-10 md:py-14'>
+    <section className='mx-auto max-w-4xl px-3 py-6 md:py-14'>
       <h2 className='mb-4 text-center text-4xl font-extrabold text-slate-900'>Features</h2>
       <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-3'>
         {features.map((feature, i) => (

@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <section className='py-36 text-center'>
+    <section className='mx-auto max-w-2xl py-36 text-center'>
       <h1 className='text-5xl font-extrabold text-slate-900'>
         Unleash the Power of <br className='md:hidden' />
         <span className='bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent'>
