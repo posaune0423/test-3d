@@ -7,7 +7,10 @@ const HeroSection = () => {
           Flow Data
         </span>
       </h1>
-      <p className='mt-4 text-slate-600'>Visualize Your Digital Footprint in 3D</p>
+      <p className='mt-4 px-8 text-sm text-slate-600 md:text-base'>
+        Explore the infinite possibilities of your digital universe with our cutting-edge 3D
+        visualization of your online footprint.
+      </p>
     </section>
   )
 }

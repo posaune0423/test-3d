@@ -20,7 +20,7 @@ const InstallButton = () => {
   }, [promptEvent, promptToInstall])
 
   return (
-    <Button onClick={onInstallClick} className='bg-gradient-to-r from-blue-400 to-blue-700 px-6'>
+    <Button onClick={onInstallClick} className='bg-gradient-to-r from-blue-400 to-blue-700 px-6 hover:opacity-80'>
       Install
     </Button>
   )
