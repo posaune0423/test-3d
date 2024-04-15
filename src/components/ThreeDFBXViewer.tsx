@@ -1,7 +1,7 @@
 'use client'
 
 import { OrbitControls, useFBX } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 
 interface ThreeDFBXViewerProps {
   fbxFile: string
@@ -9,6 +9,9 @@ interface ThreeDFBXViewerProps {
 
 const FBXModel = ({ file }: { file: string }) => {
   const fbx = useFBX(file)
+  useFrame((state, delta) => {
+    fbx.rotation.y += delta * 0.5 // Adjust rotation speed by changing 0.5
+  })
   return <primitive object={fbx} scale={0.02} />
 }
 
