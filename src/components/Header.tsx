@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import InstallButton from '@/app/lp/InstallButton'
+import InstallButton from '@/app/lp/_components/InstallButton'
 
 const Header = () => {
   return (
