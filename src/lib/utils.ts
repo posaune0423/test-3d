@@ -24,3 +24,6 @@ export const detectAndroid = () => {
 export const detectMobile = () => {
   return detectiOS() || detectAndroid()
 }
+
+export const isStandalone =
+  typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches

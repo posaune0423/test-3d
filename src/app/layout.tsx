@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.scss'
 import Providers from './Providers'
-import GlobalFooter from '@/components/GlobalFooter'
 import {
   APP_NAME,
   APP_DEFAULT_TITLE,
@@ -10,7 +9,6 @@ import {
   APP_TITLE_TEMPLATE,
   splashScreens,
 } from '@/constants'
-import { cn } from '@/lib/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -64,9 +62,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cn(inter.className, 'min-h-screen max-w-md mx-auto')}>
+      <body className={inter.className}>
         <Providers>{children}</Providers>
-        <GlobalFooter />
       </body>
     </html>
   )

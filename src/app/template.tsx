@@ -23,7 +23,6 @@ const variants = {
 export default function Template({ children }: { children: ReactNode }) {
   return (
     <motion.div
-      className='site-wrapper'
       variants={variants}
       initial='slideInFromLeft'
       animate='center'

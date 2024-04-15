@@ -2,7 +2,7 @@ import ThreeDFBXViewer from '@/components/ThreeDFBXViewer'
 
 const Home = () => {
   return (
-    <main className='min-h-[calc(100vh-90px)] w-full'>
+    <main className='mx-auto min-h-[calc(100vh-90px)] w-full max-w-md'>
       <div className='h-[500px] w-full'>
         <ThreeDFBXViewer fbxFile='/sphere.fbx' />
       </div>
