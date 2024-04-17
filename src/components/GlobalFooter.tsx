@@ -7,7 +7,7 @@ const GlobalFooter = () => {
       <div className='flex items-center justify-between'>
         <MotionLink
           href='/'
-          className='flex flex-col items-center justify-center text-sm font-medium hover:opacity-50'
+          className='flex flex-col items-center justify-center text-sm hover:opacity-50'
         >
           <Home size={24} className='mb-1' />
           Home

@@ -1,9 +1,9 @@
 import { type AppleImage } from 'next/dist/lib/metadata/types/extra-types'
 
-export const APP_NAME = 'PWA App'
-export const APP_DEFAULT_TITLE = 'My Awesome PWA App'
-export const APP_TITLE_TEMPLATE = 'PWA App | %s'
-export const APP_DESCRIPTION = 'Best PWA app in the world!'
+export const APP_NAME = ':Dare'
+export const APP_DEFAULT_TITLE = 'The internal library in DeNA'
+export const APP_TITLE_TEMPLATE = ':Dare | %s'
+export const APP_DESCRIPTION = 'The internal library in DeNA'
 
 export const splashScreens: AppleImage[] = [
   {

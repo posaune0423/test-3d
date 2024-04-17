@@ -1,11 +1,11 @@
-import ThreeDFBXViewer from '@/components/ThreeDFBXViewer'
+import BookList from './_components/BoolkList'
+import SearchBox from './_components/SearchBox'
 
 const Home = () => {
   return (
-    <main className='mx-auto min-h-[calc(100vh-90px)] w-full max-w-md'>
-      <div className='h-[500px] w-full'>
-        <ThreeDFBXViewer fbxFile='/sphere.fbx' />
-      </div>
+    <main className='mx-auto mb-[90px] min-h-[calc(100vh-90px)] w-full max-w-md'>
+      <SearchBox />
+      <BookList />
     </main>
   )
 }
