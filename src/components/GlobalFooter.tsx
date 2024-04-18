@@ -13,7 +13,7 @@ const GlobalFooter = () => {
           ホーム
         </MotionLink>
         <MotionLink
-          href='/history'
+          href='/register'
           className='flex flex-col items-center justify-center text-xs font-medium opacity-50 hover:opacity-100'
         >
           <Book size={24} className='mb-1' />

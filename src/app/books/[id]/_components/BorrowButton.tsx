@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -9,18 +10,24 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import { type Book } from '@/constants/mock'
 
-const BorrowButton = () => {
+const BorrowButton = ({ book }: { book: Book }) => {
+  const [open, setOpen] = useState(false)
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button className='w-full'>この本を借りる</Button>
       </DialogTrigger>
       <DialogContent className='sm:max-w-md'>
         <DialogHeader>
-          <DialogTitle>この本を借りる</DialogTitle>
-          <DialogDescription />
+          <DialogTitle>{book.title}</DialogTitle>
+          <DialogDescription>{book.author}</DialogDescription>
         </DialogHeader>
+        <DialogDescription>{book.author}</DialogDescription>
+        <Button className='w-full' onClick={() => setOpen(false)}>
+          {book.title}
+        </Button>
       </DialogContent>
     </Dialog>
   )

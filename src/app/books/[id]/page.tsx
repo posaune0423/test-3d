@@ -36,7 +36,7 @@ const ReviewCard = ({ review }: { review: Review }) => {
 }
 
 const BookDetail = ({ params }: { params: { id: number } }) => {
-  const book = books[params.id]
+  const book = books[params.id - 1]
 
   return (
     <main className='mx-auto mb-[90px] min-h-[calc(100vh-90px)] w-full max-w-md'>
@@ -48,7 +48,7 @@ const BookDetail = ({ params }: { params: { id: number } }) => {
       <section className='p-3'>
         <Image src={book.thumbnail} alt='Book Image' width={150} height={300} className='mx-auto' />
         <div className='flex justify-center py-4'>
-          <BorrowButton />
+          <BorrowButton book={book} />
         </div>
         <div className='mb-4'>
           <h1 className='text-center text-lg font-bold'>{book.title}</h1>
