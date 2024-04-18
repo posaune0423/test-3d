@@ -5,7 +5,7 @@ import { books, type Book } from '@/constants/mock'
 
 const BookCard = ({ book }: { book: Book }) => {
   return (
-    <li className='h-[200px] w-[100px]'>
+    <li className='w-[100px]'>
       <MotionLink href={`/books/${book.id}`}>
         <Image src={book.thumbnail} width={100} height={400} alt={`Cover of ${book.title}`} />
       </MotionLink>
@@ -17,7 +17,7 @@ const BookList = () => {
   return (
     <section className='mx-auto px-2'>
       <h2 className='mb-4 text-lg font-bold'>おすすめの本</h2>
-      <ul className='grid grid-cols-3 place-items-center justify-center'>
+      <ul className='grid grid-cols-3 place-items-center justify-center gap-4'>
         {books.map((book) => (
           <BookCard key={book.id} book={book} />
         ))}

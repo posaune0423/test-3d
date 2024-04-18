@@ -3,20 +3,35 @@
 import { Search } from 'lucide-react'
 import React, { useState } from 'react'
 
-const SearchBox = () => {
+const SearchBox = ({
+  toggleSearching,
+  onFocus,
+  onBlur,
+  className,
+}: {
+  className?: string
+  toggleSearching: () => void
+  onFocus?: () => void
+  onBlur?: () => void
+}) => {
   const [searchTerm, setSearchTerm] = useState('')
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value)
   }
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     console.log('Search Term:', searchTerm)
-    // Add any additional logic for search submission here
+    const searchHistory: string[] = JSON.parse(localStorage.getItem('searchHistory') || '[]')
+    localStorage.setItem('searchHistory', JSON.stringify([...searchHistory, searchTerm]))
+    toggleSearching()
   }
 
   return (
-    <div className='bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
+    <div
+      className={`flex-auto bg-background/95 py-4 backdrop-blur supports-[backdrop-filter]:bg-background/60 ${className}`}
+    >
       <form onSubmit={handleSubmit}>
         <div className='relative'>
           <input
@@ -24,6 +39,9 @@ const SearchBox = () => {
             placeholder='どんな本をお探しですか？'
             type='search'
             onChange={handleSearchChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onClick={toggleSearching}
           />
           <button className='absolute right-2 top-2.5 flex size-4 items-center text-muted-foreground'>
             <Search />

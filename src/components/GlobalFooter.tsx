@@ -1,4 +1,4 @@
-import { Home, UserRound, History } from 'lucide-react'
+import { Home, UserRound, Book } from 'lucide-react'
 import MotionLink from './MotionLink'
 
 const GlobalFooter = () => {
@@ -7,24 +7,24 @@ const GlobalFooter = () => {
       <div className='flex items-center justify-between'>
         <MotionLink
           href='/'
-          className='flex flex-col items-center justify-center text-sm hover:opacity-50'
+          className='flex flex-col items-center justify-center text-xs opacity-50 hover:opacity-100'
         >
           <Home size={24} className='mb-1' />
-          Home
+          ホーム
         </MotionLink>
         <MotionLink
           href='/history'
-          className='flex flex-col items-center justify-center text-sm font-medium hover:opacity-50'
+          className='flex flex-col items-center justify-center text-xs font-medium opacity-50 hover:opacity-100'
         >
-          <History size={24} className='mb-1' />
-          History
+          <Book size={24} className='mb-1' />
+          貸す
         </MotionLink>
         <MotionLink
           href='/profile'
-          className='flex flex-col items-center justify-center text-sm font-medium hover:opacity-50'
+          className='flex flex-col items-center justify-center text-xs font-medium opacity-50 hover:opacity-100'
         >
           <UserRound size={24} className='mb-1' />
-          Profile
+          マイページ
         </MotionLink>
       </div>
     </footer>
