@@ -16,7 +16,6 @@ const BookCard = ({ book }: { book: Book }) => {
 const BookList = () => {
   return (
     <section className='mx-auto px-2'>
-      <h2 className='mb-4 text-lg font-bold'>おすすめの本</h2>
       <ul className='grid grid-cols-3 place-items-center justify-center gap-4'>
         {books.map((book) => (
           <BookCard key={book.id} book={book} />

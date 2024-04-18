@@ -20,6 +20,12 @@ export type Review = {
   reviewer: User
 }
 
+export const users: User[] = [
+  { id: 1, name: '山田太郎', thumbnail: '/images/user/user1.jpg' },
+  { id: 2, name: '佐藤花子', thumbnail: '/images/user/user2.jpg' },
+  { id: 3, name: '鈴木一郎', thumbnail: '/images/user/user3.jpg' },
+]
+
 export const books: Book[] = [
   {
     id: 1,
@@ -78,20 +84,20 @@ export const reviews: Review[] = [
     bookId: 1,
     content: '非常に興味深い内容で、認知科学の基本がよく理解できました。',
     rating: 5,
-    reviewer: { id: 101, name: '山田太郎', thumbnail: '/images/profile.jpg' },
+    reviewer: users[0],
   },
   {
     id: 2,
     bookId: 2,
     content: 'クリーンアーキテクチャの概念がクリアに説明されており、参考になります。',
     rating: 4,
-    reviewer: { id: 102, name: '佐藤花子', thumbnail: '/images/profile.jpg' },
+    reviewer: users[1],
   },
   {
     id: 3,
     bookId: 3,
     content: '1920年代のアメリカの雰囲気が色濃く表現されていて、引き込まれる作品です。',
     rating: 5,
-    reviewer: { id: 103, name: '鈴木一郎', thumbnail: '/images/profile.jpg' },
+    reviewer: users[2],
   },
 ]

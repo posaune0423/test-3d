@@ -99,7 +99,14 @@ const TopPage = () => {
   return (
     <section>
       <Header isSearching={isSearching} toggleSearching={toggleSearching} />
-      {isSearching ? <SearchPanel /> : <BookList />}
+      {isSearching ? (
+        <SearchPanel />
+      ) : (
+        <>
+          <h2 className='mb-4 px-2 text-lg font-bold'>おすすめの本</h2>
+          <BookList />
+        </>
+      )}
     </section>
   )
 }

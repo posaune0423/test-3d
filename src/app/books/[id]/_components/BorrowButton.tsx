@@ -22,11 +22,11 @@ const BorrowButton = ({ book }: { book: Book }) => {
       <DialogContent className='sm:max-w-md'>
         <DialogHeader>
           <DialogTitle>{book.title}</DialogTitle>
-          <DialogDescription>{book.author}</DialogDescription>
+          <DialogDescription>{book.description}</DialogDescription>
         </DialogHeader>
-        <DialogDescription>{book.author}</DialogDescription>
+        <DialogDescription className='text-center'>{book.author}</DialogDescription>
         <Button className='w-full' onClick={() => setOpen(false)}>
-          {book.title}
+          この本を借りる
         </Button>
       </DialogContent>
     </Dialog>

@@ -20,7 +20,7 @@ const GlobalFooter = () => {
           貸す
         </MotionLink>
         <MotionLink
-          href='/profile'
+          href='/my'
           className='flex flex-col items-center justify-center text-xs font-medium opacity-50 hover:opacity-100'
         >
           <UserRound size={24} className='mb-1' />
