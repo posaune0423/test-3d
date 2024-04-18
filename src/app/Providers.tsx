@@ -2,17 +2,16 @@
 
 import { Analytics } from '@vercel/analytics/react'
 import { useRouter } from 'next/navigation'
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, useMemo } from 'react'
 import Footer from '@/components/Footer'
 import GlobalFooter from '@/components/GlobalFooter'
 import Header from '@/components/Header'
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
-  // const isStandalone = useMemo(
-  //   () => typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches,
-  //   [],
-  // )
-  const isStandalone = true
+  const isStandalone = useMemo(
+    () => typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches,
+    [],
+  )
 
   const router = useRouter()
 
